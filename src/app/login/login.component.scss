@@ -1,0 +1,58 @@
+@import '../common/styles/common.scss';
+
+.login-page {
+  height: 100vh;
+  background-color: #9c9c9c;
+  @include flex(row);
+  .login-container {
+    @include flex(column);
+
+    .login-header {
+      @include flex(row);
+      width: 600px;
+      height: 60px;
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      background-color: $accent-color;
+    }
+    .form-group {
+      background-color: white;
+      box-sizing: border-box;
+      padding: 20px;
+      width: 600px;
+
+      .form-control {
+        &:focus {
+          border-color: #9c9c9c;
+          box-shadow: none;
+        }
+      }
+      .error-container {
+        height: 30px;
+        .error {
+          color: red;
+          font-size: 12px;
+          &::before{
+              content: '*';
+          }
+        }
+      }
+      .error-input {
+        border-color: red !important;
+      }
+      button {
+        @include flex(row);
+        background-color: $accent-color;
+        color: white;
+        width: 100px;
+        margin: 0 auto;
+      }
+      .btn {
+          &:focus{
+              box-shadow: none;
+          }
+      }
+    }
+  }
+}

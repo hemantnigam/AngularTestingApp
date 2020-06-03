@@ -1,0 +1,26 @@
+@import "../common/styles/common.scss";
+
+.dashboard-page {
+  height: 100vh;
+  header {
+    padding: 30px;
+    height: 80px;
+    background-color: $accent-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      font-size: 30px;
+      color: white;
+    }
+  }
+  main {
+    @include flex(row);
+    height: calc(100vh - 80px);
+    background-color: #ece9e9;
+    .dashboard-label {
+      font-size: 100px;
+      color: $accent-color;
+    }
+  }
+}

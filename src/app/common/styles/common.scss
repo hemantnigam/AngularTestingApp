@@ -1,0 +1,8 @@
+$accent-color: #575151;
+
+@mixin flex($direction) {
+  flex-direction: $direction;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
