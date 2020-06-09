@@ -4,6 +4,9 @@
       <label for="">LOGIN</label>
     </div>
     <form [formGroup]="loginForm" (ngSubmit)="login()" class="form-group">
+      <div class="error-container">
+        <span *ngIf="errorMsg" class="error">{{errorMsg}}</span>
+      </div>
       <label for="username">Username</label>
       <input
         id="username"
@@ -41,7 +44,7 @@
                 Password should have atleast 8 characters.
             </div>
         </div>
-      <button type="submit" class="btn" [disabled]="!loginForm.valid">
+      <button id="loginButton" type="submit" class="btn loginButton" [disabled]="!loginForm.valid">
         Login
       </button>
     </form>
